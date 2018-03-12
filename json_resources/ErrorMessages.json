@@ -1,0 +1,5 @@
+{
+	"CmdHandler": {
+		"NO_FOLDER": "CmdHandler could not be created, a folder name must be specified"
+	}
+}
