@@ -74,9 +74,9 @@ class CmdHandler {
 	}
 
     /**
-	 * If this parameter is false, we will have more information at the level of the cli.
+	 * If this parameter is false, we will have less information at the level of the cli.
      */
-	static unsetsetVerbose() {
+	static unsetVerbose() {
 		this.verbose = false;
 	}
 }
