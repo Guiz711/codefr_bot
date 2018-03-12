@@ -45,4 +45,8 @@ class ping {
 
 }
 
+/**
+ * Finally, we export the class to be able to use it when a user types the command.
+ * @type {ping}
+ */
 module.exports = ping;
