@@ -23,4 +23,10 @@ client.on('message', msg => {
     }
 });
 
-client.login(botToken);
+/**
+ * bot_token.json content:
+ *  {
+ *      "T": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+ *  }
+ */
+client.login(botToken.T);
