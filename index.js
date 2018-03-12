@@ -4,6 +4,10 @@ const botToken = require('./json_resources/bot_token.json');
 const botConfig	= require('./json_resources/bot_config.json');
 const CmdHandler = require('./CmdHandler.js');
 
+/*
+** Bot initialization and events handling.
+*/
+
 CmdHandler.setVerbose();
 const handler = new CmdHandler('commands');
 handler.loadAllCommands();
@@ -12,11 +16,11 @@ client.on('ready', () => console.log('Discord bot ready'));
 client.on('error', err => console.error(err));
 
 client.on('message', msg => {
-	try {
-		handler.treatMessage(client, msg);
-	} catch (err) {
-		console.error(err.message);
-	}
+    try {
+        handler.treatMessage(client, msg);
+    } catch (err) {
+        console.error(err.message);
+    }
 });
 
 client.login(botToken);

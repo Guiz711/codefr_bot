@@ -13,6 +13,9 @@ class CmdHandler {
 			console.log('CmdHandler instance created');
 	}
 
+    /**
+	 * We load all the commands in the "commands" folder.
+     */
 	loadAllCommands() {
 		this.files = fs.readdirSync(`./${this.cmdFolder}/`);
 		this.files.forEach((file) => {
@@ -26,6 +29,11 @@ class CmdHandler {
 		}
 	}
 
+    /**
+	 * We look at the first parameter to execute the class that will execute the request command by the user.
+     * @param client
+     * @param message
+     */
 	treatMessage(client, message) {
 		try {
 			if (message.content.startsWith(botConfig.msgPrefix)) {
@@ -38,6 +46,11 @@ class CmdHandler {
 		}
 	}
 
+    /**
+	 * It is given the complete message, it passes to seperate the beginning of the message (command) of the continuation.
+     * @param msgContent
+     * @returns {{cmd: string, args: Array}}
+     */
 	getMsgParams(msgContent) {
 		try {
 			let parsedMsg = {
@@ -53,11 +66,17 @@ class CmdHandler {
 		}
 	}
 
+    /**
+	 * If this parameter is true, we will have more information at the level of the cli.
+     */
 	static setVerbose() {
 		this.verbose = true;
 	}
 
-	static unsetsetVerbose() {
+    /**
+	 * If this parameter is false, we will have less information at the level of the cli.
+     */
+	static unsetVerbose() {
 		this.verbose = false;
 	}
 }
