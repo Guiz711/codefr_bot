@@ -1,6 +1,6 @@
 
 <p align="center">  
-  <img src="https://raw.githubusercontent.com/waldyr/Sublime-Installer/master/sublime_text.png" align="center" />
+  <img src="https://cdn.discordapp.com/icons/295219533944324098/ab16e3128fe85ca4af25d36c73608e2c.png" align="center" />
   
   ----------
   Communauté francophone d'entraide autour de la programmation, des langages informatiques et nouvelles technologies rassemblant amateurs, etudiants et professionnels.
