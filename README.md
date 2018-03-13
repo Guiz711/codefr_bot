@@ -1,7 +1,6 @@
-
 <p align="center">  
   
-  ![Logo](https://cdn.discordapp.com/icons/295219533944324098/ab16e3128fe85ca4af25d36c73608e2c.png)
+  <img src="https://cdn.discordapp.com/icons/295219533944324098/ab16e3128fe85ca4af25d36c73608e2c.png">
   
   ----------
 
