@@ -1,6 +1,5 @@
 const fs = require('fs');
 const ErrorMessages = require ('./json_resources/ErrorMessages.json');
-const botConfig	= require('./json_resources/bot_config.json');
 const logger = require("./libs/logger");
 
 class CmdHandler {
@@ -38,7 +37,7 @@ class CmdHandler {
      */
 	treatMessage(client, message) {
 		try {
-			if (message.content.startsWith(botConfig.msgPrefix)) {
+			if (message.content.startsWith(process.env.CMD_PREFIX)) {
 				let parsedMsg = this.getMsgParams(message.content);
 				let command = new this.commands[parsedMsg.cmd]();
 				command.run(client, message, parsedMsg.args);
@@ -59,7 +58,7 @@ class CmdHandler {
 				cmd : '',
 				args : []
 			};
-			msgContent = msgContent.slice(botConfig.msgPrefix.length).trim().split(/ +/g);
+			msgContent = msgContent.slice(process.env.CMD_PREFIX.length).trim().split(/ +/g);
 			parsedMsg.cmd = msgContent[0];
 			parsedMsg.args = msgContent.slice(1);
 			return parsedMsg;
