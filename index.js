@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const dotenv = require("dotenv").config();
-const botConfig	= require('./json_resources/bot_config.json');
 const CmdHandler = require('./CmdHandler.js');
 const logger = require("./libs/logger");
 
