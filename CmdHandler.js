@@ -1,6 +1,7 @@
 const fs = require('fs');
 const ErrorMessages = require ('./json_resources/ErrorMessages.json');
 const botConfig	= require('./json_resources/bot_config.json');
+const logger = require("./libs/logger");
 
 class CmdHandler {
 	constructor(folder) {
@@ -9,8 +10,9 @@ class CmdHandler {
 		this.cmdFolder = folder;
 		this.commands = {};
 		this.files = [];
-		if (CmdHandler.verbose)
-			console.log('CmdHandler instance created');
+		if (CmdHandler.verbose) {
+			logger.info("CmdHandler instance created");
+		}
 	}
 
     /**
@@ -21,11 +23,11 @@ class CmdHandler {
 		this.files.forEach((file) => {
 			let cmdName = file.substr(0, file.length - 3);
 			this.commands[cmdName] = require(`./${this.cmdFolder}/${file}`);
-			console.log(`./${this.cmdFolder}/${file}`);
 		});
 		if (CmdHandler.verbose) {
-			console.log(`files read: ${this.files}`);
-			console.log('loaded commands:', this.commands);
+			this.files.forEach(function (value) {
+				logger.info(`Loading file: ${value}`);
+            });
 		}
 	}
 

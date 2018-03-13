@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const dotenv = require("dotenv").config();
 const botConfig	= require('./json_resources/bot_config.json');
 const CmdHandler = require('./CmdHandler.js');
+const logger = require("./libs/logger");
 
 /*
 ** Bot initialization and events handling.
@@ -12,14 +13,19 @@ CmdHandler.setVerbose();
 const handler = new CmdHandler('commands');
 handler.loadAllCommands();
 
-client.on('ready', () => console.log('Discord bot ready'));
-client.on('error', err => console.error(err));
+client.on('ready', () =>
+    logger.info('Discord bot ready')
+);
+
+client.on('error', err =>
+    logger.err(err)
+);
 
 client.on('message', msg => {
     try {
         handler.treatMessage(client, msg);
     } catch (err) {
-        console.error(err.message);
+        logger.err(err.message);
     }
 });
 
