@@ -48,3 +48,4 @@ Toute contribution est la bienvenue.
 
  - [Guiz711](https://github.com/Guiz711)
  - [Hichxm](https://github.com/hichxm)
+ - [LightDiscord](https://github.com/LightDiscord)
