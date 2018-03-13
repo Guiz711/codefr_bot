@@ -25,7 +25,8 @@ class ping {
         /**
          * Message sent.
          */
-        message.channel.send("Pong")
+        time = Date.now() - message.createdTimestamp;
+        message.channel.send("Pong ! " + time + "ms");
 
             /**
              * When the shipment went well.
