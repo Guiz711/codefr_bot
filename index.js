@@ -19,9 +19,7 @@ client.on('ready', () => {
     /**
      * When the bot is ready modify the parameters (username, activity ...)
      */
-    let bot;
-
-    bot = new Bot(client);
+    const bot = new Bot(client);
     bot.username(config.bot_name);
     bot.avatar(config.bot_avatar);
     bot.activity(config.bot_games[0]);
