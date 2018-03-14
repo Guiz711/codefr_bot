@@ -25,6 +25,7 @@ client.on('ready', () => {
     bot.username(config.bot_name);
     bot.avatar(config.bot_avatar);
     bot.activity(config.bot_games[0]);
+    //bot.note(config.bot_note);
 
     logger.info('Discord bot ready')
 });

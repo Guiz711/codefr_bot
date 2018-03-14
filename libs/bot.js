@@ -62,6 +62,25 @@ class Bot {
             });
     }
 
+    /**
+     * This function changes the note of the user.
+     * Otherwise it will simply returner the note of the current bot.
+     * @param note
+     */
+    note(note = null) {
+        if (note === null) {
+            return this.bot.note;
+        }
+
+        this.bot.setNote(note)
+            .then(() => {
+                logger.info("Note: " + note);
+            })
+            .catch((err) => {
+                logger.err("Error: " + err.code)
+            });
+    }
+
 
 }
 
