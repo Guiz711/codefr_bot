@@ -13,7 +13,7 @@ class help {
 		let template = "";
 
 		template += "```yaml\n";
-		template += "├─ La commande help, retourne toute les commandes disponible.\n";
+		template += "├─ Voici la liste des commandes.\n";
 		template += "│\n";
 
 		this.helpFile.commands.forEach((command, index) => {
