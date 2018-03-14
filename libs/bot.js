@@ -91,7 +91,29 @@ class Bot {
             });
     }
 
+    /**
+     * This function changes the status of the user.
+     * Otherwise it will simply returner the status of the current bot.
+     * @param status
+     */
+    status(status = null) {
+        if (status === null) {
+            return this.bot.presence.status;
+        }
+
+        this.bot.setStatus(status)
+            .then(() => {
+                logger.info("Status: " + status);
+            })
+            .catch((err) => {
+                logger.err("Error: " + err.code)
+            });
+    }
+
 
 }
 
+/**
+ * Export class to manage Bot.
+ */
 module.exports = Bot;
