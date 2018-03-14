@@ -1,11 +1,11 @@
 <p align="center">  
-  
+
   <img src="https://cdn.discordapp.com/icons/295219533944324098/ab16e3128fe85ca4af25d36c73608e2c.png">
-  
+
   ----------
 
   Communauté francophone d'entraide autour de la programmation, des langages informatiques et nouvelles technologies rassemblant amateurs, etudiants et professionnels.
-  
+
   **Rejoins nous sur [discord](https://discord.gg/DqjWcUc)**
 
 </p>
@@ -32,7 +32,7 @@ Pour nous aider rien de plus simple:
  2. **Créer une branche** et faite **vos modification**
  3. Faite un **pull request** et detailler bien vos changement
 
-N'oubliez pas qu'aucune aide n'est mauvaise et que ce projet est fait pour créer un bot discord sans pour autant être le rendre compliqué pour que tout le monde puisse y contribuer et apporter sa touche personelle. 
+N'oubliez pas qu'aucune aide n'est mauvaise et que ce projet est fait pour créer un bot discord sans pour autant être le rendre compliqué pour que tout le monde puisse y contribuer et apporter sa touche personelle.
 
 # Bug, question ou nouvelle fonctionnalité ?
 
@@ -49,4 +49,5 @@ Toute contribution est la bienvenue.
  - [Guiz711](https://github.com/Guiz711)
  - [Hichxm](https://github.com/hichxm)
  - [LightDiscord](https://github.com/LightDiscord)
- - [QuantumSheep](https://github.com/QuantumSheep) 
+ - [Quenntinne](https://github.com/Quenntinne) 
+ - [QuantumSheep](https://github.com/QuantumSheep)
