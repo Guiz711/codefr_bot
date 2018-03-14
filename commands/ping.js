@@ -22,11 +22,12 @@ class ping {
      */
     run(client, message, args) {
 
+        let ping = Math.round(client.ping);
+
         /**
          * Message sent.
          */
-        let time = Date.now() - message.createdTimestamp;
-        message.channel.send("Pong ! " + time + "ms")
+        message.channel.send("Pong ! " + ping + "ms")
 
             /**
              * When the shipment went well.
