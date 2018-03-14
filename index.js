@@ -14,9 +14,28 @@ CmdHandler.setVerbose();
 const handler = new CmdHandler('commands');
 handler.loadAllCommands();
 
-client.on('ready', () =>
+client.on('ready', () => {
+    /**
+     * When the bot is ready modify the parameters (username, activity ...)
+     */
+    let bot;
+
+    bot = client.user;
+    bot.setUsername(config.bot_name)
+        .then(() => {
+            logger.info("Username: " + bot.username)
+        })
+        .catch(err => {
+            logger.err("Error: " + err.code)
+        });
+
+    bot.setActivity(config.bot_games[0])
+        .then(() => {
+            logger.info("Activity: " + config.bot_games[1])
+        });
+
     logger.info('Discord bot ready')
-);
+});
 
 client.on('error', err =>
     logger.err(err)

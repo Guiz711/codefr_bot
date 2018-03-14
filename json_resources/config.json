@@ -1,3 +1,9 @@
 {
+	"bot_name": "CodeFR_BO",
+	"bot_games": [
+		"Development...",
+		"Playing counter strike... I make clutch shut."
+	],
+
 	"cmd_prefix": "!"
 }
