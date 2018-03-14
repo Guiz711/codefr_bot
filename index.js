@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const dotenv = require("dotenv").config();
 const CmdHandler = require('./CmdHandler.js');
 
+const Bot = require("./libs/bot");
 const config = require("./libs/config");
 const logger = require("./libs/logger");
 
@@ -20,19 +21,8 @@ client.on('ready', () => {
      */
     let bot;
 
-    bot = client.user;
-    bot.setUsername(config.bot_name)
-        .then(() => {
-            logger.info("Username: " + bot.username)
-        })
-        .catch(err => {
-            logger.err("Error: " + err.code)
-        });
-
-    bot.setActivity(config.bot_games[0])
-        .then(() => {
-            logger.info("Activity: " + config.bot_games[1])
-        });
+    bot = new Bot(client);
+    bot.username(config.bot_name);
 
     logger.info('Discord bot ready')
 });
