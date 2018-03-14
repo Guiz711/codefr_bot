@@ -33,6 +33,11 @@ class Bot {
             });
     }
 
+    /**
+     * This function changes the avatar of the user.
+     * Otherwise it will simply returner the avatar url of the current bot.
+     * @param link
+     */
     avatar(link = null) {
         if (link === null) {
             return this.bot.avatarURL;
@@ -48,6 +53,11 @@ class Bot {
 
     }
 
+    /**
+     * This function changes the activity of the user.
+     * Otherwise it will simply returner the activity of the current bot.
+     * @param game
+     */
     activity(game = null) {
         if (game === null) {
             return this.bot.game;
