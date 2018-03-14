@@ -48,6 +48,20 @@ class Bot {
 
     }
 
+    activity(game = null) {
+        if (game === null) {
+            return this.bot.game;
+        }
+
+        this.bot.setActivity(game)
+            .then(() => {
+                logger.info("Game: " + game);
+            })
+            .catch((err) => {
+                logger.err("Error: " + err.code)
+            });
+    }
+
 
 }
 
