@@ -5,7 +5,7 @@ class help {
 
 	constructor() {
 		logger.info("Help command initialised");
-		this.helpFile = require("./../json_resources/help.json");
+		this.helpFile = require("./../json_resources/commands.json");
 	}
 
 	run(client, message, args) {
