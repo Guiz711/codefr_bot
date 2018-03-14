@@ -23,6 +23,7 @@ client.on('ready', () => {
 
     bot = new Bot(client);
     bot.username(config.bot_name);
+    bot.avatar(config.bot_avatar);
 
     logger.info('Discord bot ready')
 });

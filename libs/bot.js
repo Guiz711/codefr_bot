@@ -33,6 +33,21 @@ class Bot {
             });
     }
 
+    avatar(link = null) {
+        if (link === null) {
+            return this.bot.avatarURL;
+        }
+
+        this.bot.setAvatar(link)
+            .then(() => {
+                logger.info("Avatar link: " + link)
+            })
+            .catch((err) => {
+                logger.err("Error: " + err.code)
+            });
+
+    }
+
 
 }
 
