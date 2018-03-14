@@ -29,7 +29,20 @@ class help {
 		template += "```\n";
 
 		message.channel.send(template)
-			.catch(console.error);
+
+			/**
+			 * When the shipment went well.
+			 */
+            .then(function () {
+                logger.info("Help executed by " + message.author.tag);
+            })
+
+            /**
+             * When an error has occurred.
+             */
+            .catch(function (err) {
+                logger.info("Error" + err.stderr);
+            })
 	}
 
 }
