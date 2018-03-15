@@ -2,6 +2,8 @@
  * This class is there for you to follow the pattern of the code for your next classes.
  */
 
+const logger = require("./../libs/logger");
+
 /**
  * Ping class that returns pong when called.
  */
@@ -11,7 +13,7 @@ class ping {
      * When the command is called.
      */
     constructor() {
-        console.log("Ping command initialised");
+        logger.info("Ping command initialised");
     }
 
     /**
@@ -22,24 +24,25 @@ class ping {
      */
     run(client, message, args) {
 
+        let ping = Math.round(client.ping);
+
         /**
          * Message sent.
          */
-        let time = Date.now() - message.createdTimestamp;
-        message.channel.send("Pong ! " + time + "ms")
+        message.channel.send("Pong ! " + ping + "ms")
 
             /**
              * When the shipment went well.
              */
             .then(function () {
-                console.log("Ping executed by " + client.username);
+                logger.info("Ping executed by " + client.username);
             })
 
             /**
              * When an error has occurred.
              */
             .catch(function (err) {
-                console.log("Error" + err.stderr);
+                logger.err("Error" + err.stderr);
             })
 
     }
