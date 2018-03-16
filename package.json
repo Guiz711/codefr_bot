@@ -4,6 +4,8 @@
   "description": "CodeFR community discord bot",
   "main": "index.js",
   "scripts": {
+    "gulp:beautifier": ".\\node_modules\\.bin\\gulp beautifier",
+    "gulp:verify": ".\\node_modules\\.bin\\gulp verify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
