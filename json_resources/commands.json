@@ -1,0 +1,21 @@
+{
+    "commands":   [
+
+        {
+            "name": "ping",
+            "exemple": "ping",
+            "desc": "Cette fonction retourne le delais entre le bot discord et les serveurs de discord."
+        },
+        {
+            "name": "test",
+            "exemple": "test",
+            "desc": "On sait pas trop sa sert a quoi."
+        },
+        {
+            "name": "help",
+            "exemple": "help {command:optional}",
+            "desc": "Retourne la liste des commandes, si une commande est passé en argument elle renvoie plus de detail."
+        }
+
+    ]
+}
