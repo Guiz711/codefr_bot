@@ -1,5 +1,5 @@
 const fs = require('fs');
-const ErrorMessages = require ('./json_resources/ErrorMessages.json');
+const ErrorMessages = require('./json_resources/ErrorMessages.json');
 
 const config = require("./libs/config");
 const logger = require("./libs/logger");
@@ -16,9 +16,9 @@ class CmdHandler {
 		}
 	}
 
-    /**
+	/**
 	 * We load all the commands in the "commands" folder.
-     */
+	 */
 	loadAllCommands() {
 		this.files = fs.readdirSync(`./${this.cmdFolder}/`);
 		this.files.forEach((file) => {
@@ -26,17 +26,17 @@ class CmdHandler {
 			this.commands[cmdName] = require(`./${this.cmdFolder}/${file}`);
 		});
 		if (CmdHandler.verbose) {
-			this.files.forEach(function (value) {
+			this.files.forEach(function(value) {
 				logger.info(`Loading file: ${value}`);
-            });
+			});
 		}
 	}
 
-    /**
+	/**
 	 * We look at the first parameter to execute the class that will execute the request command by the user.
-     * @param client
-     * @param message
-     */
+	 * @param client
+	 * @param message
+	 */
 	treatMessage(client, message) {
 		try {
 			if (message.content.startsWith(config.cmd_prefix)) {
@@ -49,16 +49,16 @@ class CmdHandler {
 		}
 	}
 
-    /**
+	/**
 	 * It is given the complete message, it passes to seperate the beginning of the message (command) of the continuation.
-     * @param msgContent
-     * @returns {{cmd: string, args: Array}}
-     */
+	 * @param msgContent
+	 * @returns {{cmd: string, args: Array}}
+	 */
 	getMsgParams(msgContent) {
 		try {
 			let parsedMsg = {
-				cmd : '',
-				args : []
+				cmd: '',
+				args: []
 			};
 			msgContent = msgContent.slice(config.cmd_prefix.length).trim().split(/ +/g);
 			parsedMsg.cmd = msgContent[0];
@@ -69,16 +69,16 @@ class CmdHandler {
 		}
 	}
 
-    /**
+	/**
 	 * If this parameter is true, we will have more information at the level of the cli.
-     */
+	 */
 	static setVerbose() {
 		this.verbose = true;
 	}
 
-    /**
+	/**
 	 * If this parameter is false, we will have less information at the level of the cli.
-     */
+	 */
 	static unsetVerbose() {
 		this.verbose = false;
 	}

@@ -24,7 +24,7 @@ class help {
 			} else {
 				template += "└───" + config.cmd_prefix + command.name + " \t- " + command.desc + "\n";
 			}
-        });
+		});
 
 		template += "```\n";
 
@@ -33,16 +33,16 @@ class help {
 			/**
 			 * When the shipment went well.
 			 */
-            .then(function () {
-                logger.info("Help executed by " + message.author.tag);
-            })
+			.then(function() {
+				logger.info("Help executed by " + message.author.tag);
+			})
 
-            /**
-             * When an error has occurred.
-             */
-            .catch(function (err) {
-                logger.info("Error" + err.stderr);
-            })
+			/**
+			 * When an error has occurred.
+			 */
+			.catch(function(err) {
+				logger.info("Error" + err.stderr);
+			})
 	}
 
 }
