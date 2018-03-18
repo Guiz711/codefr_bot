@@ -24,6 +24,27 @@ Puis lancez le bot!
 $ npm start
 ```
 
+# Le faire fonctionner avec Docker
+
+Construire l'image:
+```bash
+docker build -t guiz711/codefr_bot .
+```
+
+et lancé l'image:
+```bash
+docker run -t guiz711/codefr_bot
+```
+
+Ou utilisez `docker-compose`:
+```bash
+docker-compose up
+```
+
+L'installation est lente uniquement la premiere fois, elle peut durer
+jusqu'a 10 minutes (installation des mise a jours debians). Lors du prochain lancement
+le bot se lancera en quelque seconde.
+
 # Nous aider
 
 Pour nous aider rien de plus simple:
