@@ -9,43 +9,43 @@ const logger = require("./../libs/logger");
  */
 class ping {
 
-    /**
-     * When the command is called.
-     */
-    constructor() {
-        logger.info("Ping command initialised");
-    }
+	/**
+	 * When the command is called.
+	 */
+	constructor() {
+		logger.info("Ping command initialised");
+	}
 
-    /**
-     * Command automatically executed after calling the constructor.
-     * @param client
-     * @param message
-     * @param args
-     */
-    run(client, message, args) {
+	/**
+	 * Command automatically executed after calling the constructor.
+	 * @param client
+	 * @param message
+	 * @param args
+	 */
+	run(client, message, args) {
 
-        let ping = Math.round(client.ping);
+		let ping = Math.round(client.ping);
 
-        /**
-         * Message sent.
-         */
-        message.channel.send("Pong ! " + ping + "ms")
+		/**
+		 * Message sent.
+		 */
+		message.channel.send("Pong ! " + ping + "ms")
 
-            /**
-             * When the shipment went well.
-             */
-            .then(function () {
-                logger.info("Ping executed by " + client.username);
-            })
+			/**
+			 * When the shipment went well.
+			 */
+			.then(function() {
+				logger.info("Ping executed by " + client.username);
+			})
 
-            /**
-             * When an error has occurred.
-             */
-            .catch(function (err) {
-                logger.err("Error" + err.stderr);
-            })
+			/**
+			 * When an error has occurred.
+			 */
+			.catch(function(err) {
+				logger.err("Error" + err.stderr);
+			})
 
-    }
+	}
 
 }
 
