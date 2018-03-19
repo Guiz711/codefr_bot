@@ -2,9 +2,9 @@
 	"name": "codefr_bot",
 	"version": "1.0.0",
 	"description": "CodeFR community discord bot",
-	"main": "index.js",
+	"main": "main.js",
 	"scripts": {
-    "start": "node index.js",
+		"start": "node main.js",
 		"gulp:beautifier": ".\\node_modules\\.bin\\gulp beautifier",
 		"gulp:verify": ".\\node_modules\\.bin\\gulp verify"
 	},
