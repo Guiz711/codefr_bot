@@ -4,7 +4,7 @@
 	"description": "CodeFR community discord bot",
 	"main": "index.js",
 	"scripts": {
-    "start": "node index.js",
+		"start": "node index.js",
 		"gulp:beautifier": ".\\node_modules\\.bin\\gulp beautifier",
 		"gulp:verify": ".\\node_modules\\.bin\\gulp verify"
 	},

@@ -6,7 +6,7 @@
 
   Communauté francophone d'entraide autour de la programmation, des langages informatiques et nouvelles technologies rassemblant amateurs, etudiants et professionnels.
 
-  **Rejoins nous sur [discord](https://discord.gg/DqjWcUc)**
+  **Rejoins nous sur [discord](https://discord.gg/wskdAA9)**
 
 </p>
 
@@ -70,5 +70,5 @@ Toute contribution est la bienvenue.
  - [Guiz711](https://github.com/Guiz711)
  - [Hichxm](https://github.com/hichxm)
  - [LightDiscord](https://github.com/LightDiscord)
- - [Quenntinne](https://github.com/Quenntinne) 
+ - [Quenntinne](https://github.com/Quenntinne)
  - [QuantumSheep](https://github.com/QuantumSheep)
